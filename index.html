@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" type="text/css" href="threecolumns.css" />
+    <link rel="stylesheet" type="text/css" href="css/threecolumns.css" />
 <head>
 </head>
 <body>
 <div id="header">
-    <h1>Homework #1 Web Page</h1>
+    <h1>Web Development Homework</h1>
     <div>
         <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/12688328_10205869820280496_1336082210287377063_n.jpg?oh=c7ec6341acab20648510dc5211dae9e6&oe=592E296D" class="img-circle" align="middle">
     </div>
-    
+
     </div>
-    <div class="flexbox-container">
+    <!-- Column Section -->
+    <section class="column-section">
+        <div class="flexbox-container row">
         <div class="left column">I used flexbox</div>
     <div class="center center">I submitted this homework late</div>
     <div class="right column">I learned my lesson</div>
+</div>
+</section>
+    
+ <!-- Input Section -->
+ <section class="input-section">
+  <div class="input-number">
+      <p>Enter # of touches</p>
+      <input type="number" name="touches" placeholder="Enter #of touches">
   </div>
-<div id="footer">Vince Parulan</div>
+    <div class="input-button">
+        <button class="btn" type="submit">Click Me!</button>
+    </div>
+</section>
+
+<!-- Pillar Section -->
+<section class="pillar-section">
+    <div>
+    <ul class="flexbox-container row center aligner">
+        <li class="flex-item" id="1"></li>
+        <li class="flex-item" id="2"></li>
+        <li class="flex-item" id="3"></li>
+        <li class="flex-item" id="4"></li>
+        <li class="flex-item" id="5"></li>
+        <li class="flex-item" id="6"></li>
+        <li class="flex-item" id="7"></li>
+    </ul>
+     </div>
+</section>
+
+<div class="footer">Vince Parulan</div>
 </body>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/pillars.js"></script>
+    <script src="js/index.js"></script>
+
 </html>
