@@ -18,7 +18,7 @@ function pillar_position(touches) {
     return current_pillar;
 }
 
-$(".btn").click(function () {
+$("#pillar-button").click(function () {
 		var input_value = $("input[name=touches]").val();
         const pillar = pillar_position(input_value);
 
@@ -30,3 +30,10 @@ $(".btn").click(function () {
         }
         
                });
+
+$(".change-name.btn").click(function () {
+    var input_text = $("input[name=full_name]").val();
+
+    $('.footer').text(input_text);
+
+})
