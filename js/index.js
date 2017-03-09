@@ -31,9 +31,28 @@ $("#pillar-button").click(function () {
         
                });
 
-$(".change-name.btn").click(function () {
-    var input_text = $("input[name=full_name]").val();
+$(".js-flickr-keyword.btn").click(function () {
+    var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    const input_tag = $('input[name=flickr-tag]').val();
 
-    $('.footer').text(input_text);
+    $(".gallery > img").remove();
+
+    $.getJSON(flickerAPI,
+    {
+        tags: input_tag,
+        tagmode: "any",
+        format: "json"
+    })
+    .done(function(data) {
+        console.log(data);
+        $.each(data.items, function(i, item)
+        {
+            // Add div-img inside gallery div
+            $("<img>").attr("src", item.media.m).appendTo('.gallery');
+        });
+
+    });
+
+    $('.footer').text(input_tag);
 
 })
